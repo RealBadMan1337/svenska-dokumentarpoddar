@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arash Röstklon – Komplett Studio- & Arbetsbeskrivning (ElevenLabs Master)</title>
+  <style>
+    @page {
+      size: 210mm 297mm;
+      margin: 0mm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 210mm;
+      background: #0d1017;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      font-size: 9.4pt;
+      line-height: 1.44;
+    }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 12mm 14mm 11mm 14mm;
+      background: #0d1017;
+      page-break-after: always;
+      page-break-inside: avoid;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    /* Top Studio Header */
+    .hero-banner {
+      background: linear-gradient(135deg, #151b28 0%, #1c2436 100%);
+      border: 1px solid #2e3a52;
+      border-left: 5px solid #f59e0b;
+      border-radius: 9px;
+      padding: 12px 16px;
+      margin-bottom: 9px;
+    }
+    .eyebrow {
+      font-size: 7.5pt;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #f59e0b;
+      margin-bottom: 3px;
+    }
+    .hero-title {
+      font-size: 16.5pt;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin: 0 0 4px 0;
+      line-height: 1.15;
+    }
+    .hero-sub {
+      font-size: 8.8pt;
+      color: #94a3b8;
+      margin: 0;
+    }
+
+    /* Grid & Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-bottom: 9px;
+    }
+    .card {
+      background: #141923;
+      border: 1px solid #263044;
+      border-radius: 8px;
+      padding: 10px 13px;
+      margin-bottom: 9px;
+    }
+    .card-accent-red {
+      background: #1b1318;
+      border: 1px solid #5c2330;
+      border-left: 4px solid #ef4444;
+    }
+    .card-accent-green {
+      background: #111d1a;
+      border: 1px solid #1f4e3d;
+      border-left: 4px solid #10b981;
+    }
+    .card-accent-gold {
+      background: #1b1812;
+      border: 1px solid #57451c;
+      border-left: 4px solid #f59e0b;
+    }
+
+    .sec-num {
+      display: inline-block;
+      background: #f59e0b;
+      color: #0b0d12;
+      font-weight: 800;
+      font-size: 7pt;
+      padding: 1.5px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .sec-num-red {
+      background: #ef4444;
+      color: #ffffff;
+    }
+    .sec-num-green {
+      background: #10b981;
+      color: #062117;
+    }
+
+    h2 {
+      font-size: 10.6pt;
+      font-weight: 700;
+      margin: 0 0 4px 0;
+      color: #ffffff;
+    }
+    p {
+      margin: 0 0 5px 0;
+      color: #cbd5e1;
+    }
+    ul {
+      margin: 0;
+      padding-left: 15px;
+      color: #cbd5e1;
+    }
+    li {
+      margin-bottom: 3.5px;
+    }
+    strong {
+      color: #ffffff;
+    }
+
+    /* Spec Table */
+    table.spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 3px;
+      font-size: 8.5pt;
+    }
+    table.spec-table th,
+    table.spec-table td {
+      padding: 4.5px 7px;
+      border-bottom: 1px solid #252f42;
+      text-align: left;
+    }
+    table.spec-table th {
+      color: #94a3b8;
+      font-weight: 600;
+      width: 38%;
+    }
+    table.spec-table td {
+      color: #f8fafc;
+      font-weight: 600;
+    }
+    .badge-ok {
+      color: #34d399;
+      font-weight: 700;
+    }
+    .badge-no {
+      color: #f87171;
+      font-weight: 700;
+    }
+
+    /* Script / Teleprompter Boxes on Page 2 */
+    .script-card {
+      background: #141923;
+      border: 1px solid #2c374f;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+    }
+    .script-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #252f42;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+    }
+    .script-part {
+      font-size: 8.2pt;
+      font-weight: 800;
+      color: #10b981;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .script-cue {
+      font-size: 7.8pt;
+      color: #f59e0b;
+      font-weight: 600;
+    }
+    .script-text {
+      font-size: 9.8pt;
+      line-height: 1.54;
+      color: #ffffff;
+      font-weight: 450;
+    }
+    .script-text p {
+      color: #ffffff;
+      margin: 0 0 6px 0;
+    }
+    .script-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer {
+      border-top: 1px solid #1e2636;
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== SIDA 1: ARBETSBESKRIVNING & STUDIOSPECIFIKATION ==================== -->
+  <div class="page">
+    <div>
+      <div class="hero-banner">
+        <div class="eyebrow">SVENSK DOKUMENTÄR STUDIO · MASTER VOCAL CLONING PROTOCOL</div>
+        <h1 class="hero-title">ARBETSBESKRIVNING: KLONA ARASH RÖST</h1>
+        <p class="hero-sub">Komplett steg-för-steg-manual för musikstudion (ElevenLabs v3 &amp; Pro Voice Cloning). Följ denna specifikation till 100 % för sändningskvalitet i P3 Dokumentär- och Spotify Originals-klass.</p>
+      </div>
+
+      <!-- Kritisk varning: 100% Torrt -->
+      <div class="card card-accent-red">
+        <span class="sec-num sec-num-red">REGEL #1 · DEN STÖRSTA FÄLLAN I DAW</span>
+        <h2>Spela in och exportera 100 % RÅTT &amp; SNUSTORRT (Noll Plugins!)</h2>
+        <p>Som musikproducent är man van att lägga kompressor (1176/LA-2A), EQ, de-esser eller lite rum på sångkedjan. <strong>Gör absolut INTE det här!</strong></p>
+        <ul>
+          <li><strong>Varför:</strong> ElevenLabs har en egen inbyggd akustik- och kompressionsmodell. Om din WAV-fil redan är komprimerad eller de-essad i Logic/Pro Tools/Ableton blir rösten <em>dubbel-komprimerad</em> (andetagen pumpar onaturligt och s-ljuden spricker).</li>
+          <li><strong>Hur vi gör istället:</strong> Din råa, helt opåverkade mikrofonfil går in i ElevenLabs. <em>Efter</em> att AI:n har genererat talet lägger vår egen mastering-motor på vår uppmätta <strong>8-bands Radiohuset-EQ</strong> och <strong>3.0:1 FET Broadcast-kompressor</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="margin-bottom:0;">
+          <span class="sec-num">STEG 1 · RUM &amp; MIKROFONRIGG</span>
+          <h2>Sångbås &amp; Mikrofonavstånd</h2>
+          <ul>
+            <li><strong>Utrymme:</strong> Det mest dämpade, akustiskt döda sångbåset i studion. Noll rumsreflektioner.</li>
+            <li><strong>Mikrofonval:</strong> Stormembrans kondensator (t.ex. <strong>Neumann U87, TLM 103, Sony C800, AKG C414</strong>) eller dynamisk <strong>Shure SM7B</strong> via ren preamp.</li>
+            <li><strong>Avstånd:</strong> Exakt <strong>10–15 cm (en knytnäve)</strong> bakom puffskydd (pop-filter).</li>
+            <li><strong>Vinkel:</strong> Vinkla micken ca <strong>15° snett</strong> mot munnen så att <em>P</em>- och <em>B</em>-ljud passerar förbi kapseln.</li>
+            <li><strong>Konsekvens:</strong> Håll <strong>exakt samma avstånd</strong> hela passet så att närhetseffekten (basvärmen i bröstet) aldrig svajar.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-bottom:0;">
+          <span class="sec-num">STEG 2 · TEKNISK EXPORT-SPEC</span>
+          <h2>Inställningar i din DAW</h2>
+          <table class="spec-table">
+            <tr>
+              <th>Filformat</th>
+              <td>WAV (PCM Uncompressed)</td>
+            </tr>
+            <tr>
+              <th>Upplösning</th>
+              <td>24-bit / 48 kHz</td>
+            </tr>
+            <tr>
+              <th>Kanaler</th>
+              <td>Mono (1 kanal, panorering 0)</td>
+            </tr>
+            <tr>
+              <th>Gain / Toppar</th>
+              <td><span class="badge-ok">-12 dB till -6 dB</span> (aldrig nära 0 dB)</td>
+            </tr>
+            <tr>
+              <th>Kompressor / Limiter</th>
+              <td><span class="badge-no">AVSTÄNGT (Bypass)</span></td>
+            </tr>
+            <tr>
+              <th>EQ / De-Esser / Reverb</th>
+              <td><span class="badge-no">AVSTÄNGT (Bypass)</span></td>
+            </tr>
+            <tr>
+              <th>Brusreducering / Gate</th>
+              <td><span class="badge-no">AVSTÄNGT (Bypass)</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="card card-accent-gold">
+        <span class="sec-num">STEG 3 · REGI &amp; LEVERANS I SÅNGBÅSET</span>
+        <h2>Hur du ska låta: &rdquo;Kl. 01:00 på natten i ett nedsläckt kontrollrum&rdquo;</h2>
+        <ul>
+          <li><strong>Mentalt läge:</strong> Föreställ dig att klockan är 01:00 på natten. Du sitter i ett mörkt kontrollrum och berättar en sann, hemlig historia för <strong>en enda person</strong> som sitter en meter ifrån dig.</li>
+          <li><strong>Noll &rdquo;radioteater&rdquo;:</strong> Försök aldrig låta som en säljande reklamröst eller överdriven nyhetsankare. Sänk axlarna, andas lugnt med magen och låt rösten vila i ditt naturliga, varma bröstläge.</li>
+          <li><strong>Om du läser fel på ett ord:</strong> Stoppa INTE inspelningen! Var bara helt tyst i <strong>2 sekunder</strong> och läs sedan om hela meningen från början i samma tonläge. Vårt skript (<code>build_arash_voice_clone.py</code>) klipper bort alla pauser och omtagningar automatiskt.</li>
+        </ul>
+      </div>
+
+      <div class="card card-accent-green" style="margin-bottom:0;">
+        <span class="sec-num sec-num-green">STEG 4 · VÅR 2-FAS-PLAN IDAG</span>
+        <h2>Fas 1 (4–5 min Master-Audition) &rarr; Fas 2 (30–45 min Full Pro-Klon)</h2>
+        <ul>
+          <li><strong>Fas 1 (Gör detta nu – Sida 2 i denna PDF):</strong> Läs in de 4 delarna på nästa sida (tar ca 4–5 minuter). Exportera som <code>arash_rost_fas1.wav</code> och lägg i <code>Downloads</code>. Jag bygger direkt din röstklon och mixar en färdig dokumentärscen med din AI-röst + musik + arkivklipp så vi hör att mickavstånd och klang sitter 10 av 10!</li>
+          <li><strong>Fas 2 (När vi godkänt klangen i Fas 1):</strong> Då läser du in 30–45 minuter i exakt samma mick-inställning för <strong>ElevenLabs Professional Voice Cloning (PVC)</strong>. Då får vi en permanent, 100 % mänsklig master-modell av din röst som dessutom kan prata flytande svenska, norska, danska och engelska!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>SVENSK DOKUMENTÄR STUDIO · ARASH MASTER VOICE CLONE</span>
+      <span>SIDA 1 AV 2 · TEKNISK ARBETSBESKRIVNING</span>
+    </div>
+  </div>
+
+  <!-- ==================== SIDA 2: DET FONETISKA INSPELNINGSMANUSET ==================== -->
+  <div class="page">
+    <div>
+      <div class="hero-banner" style="padding: 10px 15px; margin-bottom: 8px;">
+        <div class="eyebrow">INSPELNINGSMANUS FÖR SÅNGBÅSET (CA 4–5 MINUTER)</div>
+        <h1 class="hero-title" style="font-size: 14.5pt; margin-bottom: 2px;">MANUS ATT LÄSA IN (DEL 1 TILL DEL 4)</h1>
+        <p class="hero-sub" style="font-size: 8.4pt;">Detta manus är fonetiskt konstruerat för att ge ElevenLabs alla svenska vokaler, sje-/tje-ljud, siffror, ortsnamn och alla 4 dokumentära sinnesstämningar. Läs hela i en sammanhängande tagning.</p>
+      </div>
+
+      <!-- DEL 1 -->
+      <div class="script-card">
+        <div class="script-header">
+          <span class="script-part">DEL 1 · NATTLIG COLD OPEN</span>
+          <span class="script-cue">Regi: Lågt, nära, intimt (165 WPM) – som en viskning i mörkret</span>
+        </div>
+        <div class="script-text">
+          <p>Det är natten till tisdagen den tjugofjärde maj tjugotjugotre. Klockan närmar sig midnatt i Karlstad. Ute över Klarälven ligger mörkret helt stilla. Men inne på huvudkontoret lyser skärmarna fortfarande med ett kallt, blått sken.</p>
+          <p>I mer än sju månader har ledningen förhandlat i djupaste hemlighet. Ett avtal värt tjugo miljarder kronor. Ett avtal som ska rädda hela imperiet. På bordet ligger pennorna redo. Pressmeddelandet är redan utskrivet. Men när telefonen till slut ringer från Riyadh... är linjen iskall.</p>
+          <p>På mindre än tolv timmar raderas sjuttio miljarder kronor i börsvärde ut. Det här är berättelsen om hur Sveriges största chansning förvandlades till en finansiell mardröm – inifrån de stängda rummen där allt avgjordes.</p>
+        </div>
+      </div>
+
+      <!-- DEL 2 -->
+      <div class="script-card">
+        <div class="script-header">
+          <span class="script-part">DEL 2 · DRIVANDE BERÄTTANDE &amp; UPPBYGGNAD</span>
+          <span class="script-cue">Regi: Lite mer puls, energi och framåtrörelse (180 WPM)</span>
+        </div>
+        <div class="script-text">
+          <p>För att förstå hur allt kunde gå så långt måste vi backa bandet till Stockholm, våren tjugoarton. Riksbanken har sänkt reporäntan under noll. Pengar är plötsligt gratis. På Stureplan, i glasrummen längs Strandvägen och uppe på Kungsgatan skapas nya förmögenheter varje vecka.</p>
+          <p>Affärsidén ser på pappret ut att vara helt vattentät. Man köper fastigheter, teknikbolag och spelstudior med lånade miljarder, skriver upp värdet i balansräkningen och använder vinsten som säkerhet för nästa jättelån. Småspararna älskar det. Trehundrafemtio tusen svenskar köper aktien. På bankernas skärmar i London, New York och Genève lyser siffrorna grönt.</p>
+          <p>Men under den blanka ytan finns en detalj i fotnoterna som nästan ingen har läst. En dold derivatposition. Och en skuld som förfaller till betalning långt tidigare än marknaden tror.</p>
+        </div>
+      </div>
+
+      <!-- DEL 3 -->
+      <div class="script-card">
+        <div class="script-header">
+          <span class="script-part">DEL 3 · VÄNDPUNKTEN &amp; KONFRONTATIONEN</span>
+          <span class="script-cue">Regi: Skarp, saklig, kirurgisk tyngd med tydliga pauser (155 WPM)</span>
+        </div>
+        <div class="script-text">
+          <p>Måndagen den femte maj tjugotjugo klockan nio noll noll. När dörren öppnas står kriminalinspektörer från Ekobrottsmyndigheten i hallen. Telefonen beslagtas. Datorerna säkras. Samtidigt som börsen öppnar på Kungsträdgården sprids ryktet på golvet hos storbankerna: verkställande direktören har gripits misstänkt för grovt insiderbrott.</p>
+          <p>I styrelserummet på sjunde våningen bryter paniken ut. Finansinspektionens jurister har redan granskat den verkliga värderingen av portföljen. Skillnaden mellan vad bolaget visar utåt – och vad som faktiskt ligger i pärmarna – uppgår till över en komma två miljarder kronor.</p>
+          <p>När revisorerna kallas in till krismötet under fredagskvällen ställs bara en enda fråga: Vem visste om hålet i balansräkningen – och när fattades beslutet att dölja det?</p>
+        </div>
+      </div>
+
+      <!-- DEL 4 -->
+      <div class="script-card" style="margin-bottom: 0;">
+        <div class="script-header">
+          <span class="script-part">DEL 4 · KRASCHEN &amp; FONETISK KALIBRERING</span>
+          <span class="script-cue">Regi: Lugn, mörk resonans, distinkt uttal på varje ord (150 WPM)</span>
+        </div>
+        <div class="script-text">
+          <p>När dammet till slut lägger sig över Stockholms tingsrätt är en hel epok i svensk finanshistoria över. Tiotusentals sparare har förlorat sina pengar. De lyxiga kontoren vid Norrmalmstorg står tomma. Och de män som en gång lovade att aktien skulle upp till hundra kronor skyller nu på varandra i sal trettiofyra.</p>
+          <p>Sjutton. Tjugosju. Sjuttiosju. Sjuhundrasjuttiosju miljoner kronor. Kammarrätten. Högsta domstolen. Riksgälden. Lidingö. Djursholm. Östermalm. Skellefteå. Samhällsbyggnadsbolaget. High Court i London. Securities and Exchange Commission. I slutändan handlade det aldrig om siffror i ett kalkylblad. Det handlade om makt, prestige – och rädslan för att förlora allt.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>NÄR DU ÄR KLAR: EXPORTERA SOM 24-BIT / 48 KHZ MONO WAV (100 % TORR) OCH LÄGG I DOWNLOADS</span>
+      <span>SIDA 2 AV 2 · INSPELNINGSMANUS</span>
+    </div>
+  </div>
+
+</body>
+</html>
